@@ -22,13 +22,13 @@ export default function StickyBrandHeader() {
           <div className="flex-1 flex justify-start">
             {/* 모바일 햄버거 */}
             <button
-              className="md:hidden inline-flex items-center justify-center rounded-full w-10 h-10 border border-neutral-300 dark:border-neutral-700"
+              className="md:hidden inline-flex items-center justify-center rounded-full w-12 h-12 border-2 border-neutral-400 dark:border-neutral-500 hover:border-neutral-600 dark:hover:border-neutral-400 transition-colors duration-200 bg-white dark:bg-neutral-800 shadow-sm"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
               aria-expanded={open}
               aria-controls="mobile-menu"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-neutral-600 dark:text-neutral-400">
                 <path d="M3 6h18M3 12h18M3 18h18" />
               </svg>
             </button>
@@ -121,13 +121,13 @@ export default function StickyBrandHeader() {
               ref={dialogRef}
               role="dialog"
               aria-modal="true"
-              className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center"
+              className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md flex items-center justify-center"
               onClick={(e) => {
                 if (e.target === dialogRef.current) setOpen(false);
               }}
             >
               <div className="mx-auto w-full max-w-sm px-6">
-                <div className="flex flex-col items-center gap-6 text-xl text-white">
+                <div className="flex flex-col items-center gap-8 text-2xl font-medium text-white">
                   <a 
                     href="#home" 
                     onClick={(e) => {
@@ -135,7 +135,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80"
+                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
                   >
                     HOME
                   </a>
@@ -146,7 +146,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80"
+                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
                   >
                     ABOUT
                   </a>
@@ -157,7 +157,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('hae')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80"
+                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
                   >
                     HAE
                   </a>
@@ -168,7 +168,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('yun')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80"
+                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
                   >
                     YUN
                   </a>
@@ -179,17 +179,17 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80"
+                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
                   >
                     CONTACT
                   </a>
                 </div>
                 <button
-                  className="mt-8 block mx-auto text-white/80 underline"
+                  className="mt-10 block mx-auto text-white/70 underline text-lg hover:text-white transition-colors duration-200"
                   onClick={() => setOpen(false)}
                   aria-label="Close menu"
                 >
-                  Close
+                  닫기
                 </button>
               </div>
             </div>
