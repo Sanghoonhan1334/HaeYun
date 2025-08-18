@@ -23,9 +23,6 @@ export default function AboutSection() {
           
           {/* English translation below */}
           <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700">
-            <h3 className="text-lg md:text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
-              English
-            </h3>
             <p className="text-lg md:text-xl text-neutral-500 dark:text-neutral-400 leading-relaxed">
               {en.about.subtitle}
             </p>

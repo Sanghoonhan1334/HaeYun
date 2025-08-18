@@ -28,9 +28,6 @@ export default function YunSection() {
               
               {/* English translation below */}
               <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700">
-                <h4 className="text-lg md:text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
-                  English
-                </h4>
                 <p className="text-base md:text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
                   {en.yun.description}
                 </p>
@@ -39,7 +36,7 @@ export default function YunSection() {
           </div>
           <div className="space-y-6">
             <div className="bg-white dark:bg-neutral-800 p-4 rounded-lg border border-neutral-200 dark:border-neutral-700">
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">삽입 사진</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2"></p>
               <div className="w-full h-64 bg-neutral-200 dark:bg-neutral-700 rounded overflow-hidden">
                 <img 
                   src="/images/yun-section.jpg" 
@@ -49,7 +46,7 @@ export default function YunSection() {
               </div>
             </div>
             <div className="bg-white dark:bg-neutral-800 p-4 rounded-lg border border-neutral-200 dark:border-neutral-700">
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">삽입 영상</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2"></p>
               <div className="w-full h-64 bg-neutral-200 dark:bg-neutral-700 rounded overflow-hidden relative group cursor-pointer">
                 <img 
                   src="https://img.youtube.com/vi/gBE5Y4ga1fo/maxresdefault.jpg" 

@@ -1,7 +1,7 @@
 export const translations = {
   ko: {
     home: {
-      title: "뭉친 것을 풀어내고, 자연스럽게 흐르게 하다",
+      title: "뭉친 것을 풀어내고,\n자연스럽게 흐르게 하다",
       subtitle: "한국의 헤리티지와 전통 한의학의 조화를 통해 본연의 아름다움을 되찾아가는 특별한 경험"
     },
     about: {
