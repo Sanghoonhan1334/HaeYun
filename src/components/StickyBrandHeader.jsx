@@ -14,6 +14,13 @@ export default function StickyBrandHeader() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // 디버깅용 로그
+  const handleMenuToggle = () => {
+    console.log('Hamburger clicked! Current state:', open);
+    setOpen(!open);
+    console.log('New state will be:', !open);
+  };
+
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#FAF6EF] dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
       <div className="mx-auto w-full px-4">
@@ -22,11 +29,12 @@ export default function StickyBrandHeader() {
           <div className="flex-1 flex justify-start">
             {/* 모바일 햄버거 */}
             <button
-              className="md:hidden inline-flex items-center justify-center rounded-full w-12 h-12 border-2 border-neutral-400 dark:border-neutral-500 hover:border-neutral-600 dark:hover:border-neutral-400 transition-colors duration-200 bg-white dark:bg-neutral-800 shadow-sm"
-              onClick={() => setOpen(true)}
+              className="md:hidden inline-flex items-center justify-center rounded-full w-12 h-12 border-2 border-neutral-400 dark:border-neutral-500 hover:border-neutral-600 dark:hover:border-neutral-400 transition-colors duration-200 bg-white dark:bg-neutral-800 shadow-sm cursor-pointer"
+              onClick={handleMenuToggle}
               aria-label="Open menu"
               aria-expanded={open}
               aria-controls="mobile-menu"
+              type="button"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-neutral-600 dark:text-neutral-400">
                 <path d="M3 6h18M3 12h18M3 18h18" />
@@ -114,20 +122,14 @@ export default function StickyBrandHeader() {
             <LanguageToggle />
           </div>
 
-          {/* 모바일 오버레이 메뉴 */}
+          {/* 모바일 드롭다운 메뉴 */}
           {open && (
             <div
               id="mobile-menu"
-              ref={dialogRef}
-              role="dialog"
-              aria-modal="true"
-              className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md flex items-center justify-center"
-              onClick={(e) => {
-                if (e.target === dialogRef.current) setOpen(false);
-              }}
+              className="absolute top-full left-0 right-0 md:hidden bg-white dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700 shadow-lg z-50"
             >
-              <div className="mx-auto w-full max-w-sm px-6">
-                <div className="flex flex-col items-center gap-8 text-2xl font-medium text-white">
+              <div className="px-4 py-6">
+                <div className="flex flex-col space-y-4">
                   <a 
                     href="#home" 
                     onClick={(e) => {
@@ -135,7 +137,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
+                    className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 py-2 px-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-200"
                   >
                     HOME
                   </a>
@@ -146,7 +148,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
+                    className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 py-2 px-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-200"
                   >
                     ABOUT
                   </a>
@@ -157,7 +159,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('hae')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
+                    className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 py-2 px-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-200"
                   >
                     HAE
                   </a>
@@ -168,7 +170,7 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('yun')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
+                    className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 py-2 px-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-200"
                   >
                     YUN
                   </a>
@@ -179,18 +181,11 @@ export default function StickyBrandHeader() {
                       setOpen(false);
                       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="cursor-pointer hover:opacity-80 transition-opacity duration-200 py-2"
+                    className="text-lg font-medium text-neutral-800 dark:text-neutral-200 hover:text-neutral-600 dark:hover:text-neutral-400 py-2 px-4 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors duration-200"
                   >
                     CONTACT
                   </a>
                 </div>
-                <button
-                  className="mt-10 block mx-auto text-white/70 underline text-lg hover:text-white transition-colors duration-200"
-                  onClick={() => setOpen(false)}
-                  aria-label="Close menu"
-                >
-                  닫기
-                </button>
               </div>
             </div>
           )}
