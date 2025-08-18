@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* 글로벌 스타일 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 커스텀 스타일 */
+body {
+  font-family: 'Noto Serif KR', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* 제목용 폰트 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Noto Serif KR', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* 한글 텍스트 최적화 */
+p, span, div {
+  font-family: 'Noto Serif KR', Georgia, serif;
+  font-weight: 300;
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+html, body, #root {
+  height: 100%;
+}

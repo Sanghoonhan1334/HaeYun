@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAE:YUN – 방짜유기 케어</title>
+    <script>
+      // 라이트/다크 테마 자동 적용 (시스템 선호 + 수동 저장 지원)
+      try {
+        const ls = localStorage.getItem('theme'); // 'dark' | 'light' | null
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (ls === 'dark' || (!ls && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (_) {}
+    </script>
+    <style>
+      body {
+        background-color: #FAF6EF;
+        transition: background-color 0.3s ease;
+      }
+      
+      body.dark {
+        background-color: #171717;
+      }
+    </style>    
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
