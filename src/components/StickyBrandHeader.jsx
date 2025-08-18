@@ -108,10 +108,10 @@ export default function StickyBrandHeader() {
             </nav>
           </div>
 
-          {/* 오른쪽: 언어 전환 + 테마 토글 */}
+          {/* 오른쪽: 테마 토글 + 언어 전환 */}
           <div className="flex-1 flex justify-end items-center gap-3">
-            <LanguageToggle />
             <ThemeToggle />
+            <LanguageToggle />
           </div>
 
           {/* 모바일 오버레이 메뉴 */}
