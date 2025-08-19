@@ -136,10 +136,27 @@ export default function StickyBrandHeader() {
           {/* 오른쪽: 빈 공간 (버튼들은 아래쪽으로 이동) */}
           <div className="flex-1"></div>
 
-          {/* 모바일 네비게이션 메뉴 */}
-          {menuOpen && (
-            <div className="absolute top-full left-0 right-0 md:hidden bg-white dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700 shadow-lg z-50">
-              <div className="px-6 py-8">
+          {/* 모바일 네비게이션 메뉴 - 왼쪽 슬라이드 */}
+          <div className={`fixed top-0 left-0 h-full w-80 bg-white dark:bg-neutral-800 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+            menuOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}>
+            <div className="flex flex-col h-full">
+              {/* 헤더 */}
+              <div className="flex items-center justify-between p-6 border-b border-neutral-200 dark:border-neutral-700">
+                <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">Menu</h2>
+                <button
+                  onClick={() => setMenuOpen(false)}
+                  className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors"
+                  aria-label="Close menu"
+                >
+                  <svg className="w-6 h-6 text-neutral-600 dark:text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {/* 네비게이션 링크 */}
+              <div className="flex-1 px-6 py-8">
                 <div className="flex flex-col space-y-6">
                   <a 
                     href="#home" 
@@ -179,6 +196,14 @@ export default function StickyBrandHeader() {
                 </div>
               </div>
             </div>
+          </div>
+          
+          {/* 배경 오버레이 */}
+          {menuOpen && (
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+              onClick={() => setMenuOpen(false)}
+            />
           )}
         </div>
       </div>
