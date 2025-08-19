@@ -42,7 +42,7 @@ export default function StickyBrandHeader() {
               {/* 라이트 테마 로고 */}
               <img
                 src="/images/haeyun/haeyun-mark-light.png"
-                className="block dark:hidden h-32 md:h-52 w-auto"
+                className="block dark:hidden h-36 md:h-52 w-auto"
                 alt="해윤 로고"
                 onError={(e) => {
                   console.error('Light logo failed to load');
@@ -59,7 +59,7 @@ export default function StickyBrandHeader() {
               {/* 다크 테마 로고 */}
               <img
                 src="/images/haeyun/haeyun-mark-dark.png"
-                className="hidden dark:block h-32 md:h-52 w-auto"
+                className="hidden dark:block h-36 md:h-52 w-auto"
                 alt="해윤 로고"
                 onError={(e) => {
                   console.error('Dark logo failed to load');
