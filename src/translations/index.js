@@ -61,7 +61,6 @@ export const translations = {
       email: "📧 Correo: na8103@naver.com",
       phone: "📱 Teléfono: +82-10-2216-3962",
       address: "📍 Dirección: 2º piso, 10 Sangmu Gongwon-ro, Seo-gu, Gwangju, Corea del Sur",
-      social: "Mantente al día con las últimas noticias de HAE:YUN"
     }
   },
   vi: {
@@ -94,7 +93,6 @@ export const translations = {
       email: "📧 Email: na8103@naver.com",
       phone: "📱 Điện thoại: +82-10-2216-3962",
       address: "📍 Địa chỉ: Tầng 2, 10 Sangmu Gongwon-ro, Seo-gu, Gwangju, Hàn Quốc",
-      social: "Cập nhật tin tức mới nhất từ HAE:YUN"
     }
   }
 };
@@ -130,6 +128,5 @@ export const englishTranslations = {
     email: "📧 Email: na8103@naver.com",
     phone: "📱 Phone: +82-10-2216-3962",
     address: "📍 Address: 2F, 10 Sangmu Gongwon-ro, Seo-gu, Gwangju, Republic of Korea",
-    social: "Stay updated with the latest news from HAE:YUN"
   }
 };
