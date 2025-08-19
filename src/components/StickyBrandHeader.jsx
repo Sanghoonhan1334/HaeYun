@@ -18,9 +18,9 @@ export default function StickyBrandHeader() {
       <div className="mx-auto w-full px-4">
         <div className="relative flex items-center min-h-[120px] md:min-h-[200px] py-4 md:py-7">
           {/* 왼쪽: 햄버거 메뉴 */}
-          <div className="flex-1 flex justify-start">
+          <div className="flex-1 flex justify-start relative z-10">
             <button
-              className="md:hidden p-3 rounded-lg border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200"
+              className="md:hidden p-3 rounded-lg border border-neutral-300 dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 relative z-10"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
