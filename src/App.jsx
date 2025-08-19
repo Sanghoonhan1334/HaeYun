@@ -5,6 +5,8 @@ import AboutSection from './components/AboutSection';
 import HaeSection from './components/HaeSection';
 import YunSection from './components/YunSection';
 import ContactSection from './components/ContactSection';
+import ThemeToggle from './components/ThemeToggle';
+import LanguageToggle from './components/LanguageToggle';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
@@ -13,8 +15,8 @@ function App() {
       <div className="min-h-screen flex flex-col bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
         <StickyBrandHeader />
         
-        {/* 헤더 높이에 맞춰 여백 (필요시 120~160px 사이로 미세조정) */}
-        <main className="pt-[140px]">
+        {/* 헤더 높이에 맞춰 여백 (모바일: 120px, 데스크톱: 140px) */}
+        <main className="pt-[120px] md:pt-[140px]">
 
       
 
@@ -82,6 +84,12 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* Sticky Control Buttons */}
+        <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+          <ThemeToggle />
+          <LanguageToggle />
+        </div>
 
         {/* Footer */}
         <footer className="mt-auto bg-[#111] text-[#F1EDE6] py-8">

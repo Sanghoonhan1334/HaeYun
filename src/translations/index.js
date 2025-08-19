@@ -15,7 +15,7 @@ export const translations = {
     hae: {
       title: "HAE",
       subtitle: "해 : 풀어내다",
-      description: "한국의 전통 방짜유기를 활용한 테크닉으로, 몸 속의 전반적인 순환을 개선을 돕습니다."
+      description: "한국의 전통 방짜유기를 활용한 테크닉으로, 몸 속의 전반적인 순환을 돕습니다."
     },
     yun: {
       title: "YUN",

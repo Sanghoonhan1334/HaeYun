@@ -11,19 +11,12 @@ export default function HomeSection() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 py-20">
       <div className="max-w-4xl mx-auto text-center">
-        {/* HAEYUN 글자 로고 */}
-        <div className="mb-1">
-          <img
-            src="/images/haeyun/haeyun-word-kr-light.png"
-            className="block dark:hidden h-64 md:h-80 w-auto mx-auto"
-            alt="HAEYUN"
-          />
-          <img
-            src="/images/haeyun/haeyun-word-kr-dark.png"
-            className="hidden dark:block h-64 md:h-80 w-auto mx-auto"
-            alt="HAEYUN"
-          />
-        </div>
+                                   {/* HAE YUN 텍스트 로고 */}
+          <div className="mb-24">
+                                  <h1 className="text-6xl md:text-8xl font-bold text-neutral-800 dark:text-neutral-200">
+               HAE YUN
+             </h1>
+          </div>
         
         <h1 className="text-4xl md:text-6xl font-bold text-neutral-800 dark:text-neutral-200 mb-8">
           <div className="mb-2 whitespace-pre-line">{t.home.title}</div>
