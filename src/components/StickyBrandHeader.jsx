@@ -36,7 +36,7 @@ export default function StickyBrandHeader() {
             <a 
               href="#home" 
               aria-label="Go to home" 
-              className="block cursor-pointer mt-4"
+              className="block cursor-pointer mt-6"
               onClick={scrollToHome}
             >
               {/* 라이트 테마 로고 */}
